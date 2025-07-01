@@ -24,17 +24,17 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 bg-[#121417] bg-opacity-90 backdrop-blur-md z-50 shadow-md h-24">
       <nav className="max-w-6xl mx-auto flex justify-between items-center h-full px-6 text-gray-300">
-        <div className="text-xl font-bold cursor-pointer select-none">
+        <div className="text-2xl font-bold cursor-pointer select-none">
           Valentin Bouet - Développeur web
         </div>
 
         {/* Menu desktop */}
-        <ul className="hidden md:flex gap-8">
+        <ul className="hidden md:flex gap-10 text-lg tracking-wide font-bold">
           <li>
             <a
               href="#projets"
               onClick={(e) => handleScroll(e, 'projets')}
-              className="hover:text-pink-500 transition"
+              className="hover:text-pink-500 transition hover:underline"
             >
               Projets
             </a>
@@ -42,17 +42,17 @@ export default function Header() {
           <li>
             <a
               href="#cv"
-              onClick={(e) => handleScroll(e, 'cv')}
-              className="hover:text-pink-500 transition"
+              onClick={(e) => handleScroll(e, 'technologies')}
+              className="hover:text-pink-500 transition hover:underline"
             >
-              CV
+              Compétences
             </a>
           </li>
           <li>
             <a
               href="#contact"
               onClick={(e) => handleScroll(e, 'contact')}
-              className="hover:text-pink-500 transition"
+              className="hover:text-pink-500 transition hover:underline"
             >
               Contact
             </a>
@@ -61,14 +61,14 @@ export default function Header() {
 
         {/* Bouton burger mobile */}
         <button
-          className="md:hidden flex items-center justify-center w-10 h-10 rounded focus:outline-none focus:ring-2 focus:ring-pink-500"
+          className="md:hidden flex items-center justify-center w-12 h-12 rounded focus:outline-none focus:ring-2 focus:ring-pink-500"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
           aria-expanded={isOpen}
         >
           {isOpen ? (
             <svg
-              className="w-6 h-6 text-pink-500"
+              className="w-7 h-7 text-pink-500"
               fill="none"
               stroke="currentColor"
               strokeWidth={2}
@@ -80,7 +80,7 @@ export default function Header() {
             </svg>
           ) : (
             <svg
-              className="w-6 h-6 text-gray-300"
+              className="w-7 h-7 text-gray-300"
               fill="none"
               stroke="currentColor"
               strokeWidth={2}
@@ -97,7 +97,7 @@ export default function Header() {
       {/* Menu mobile */}
       {isOpen && (
         <div className="md:hidden bg-[#121417] bg-opacity-95 backdrop-blur-md shadow-md">
-          <ul className="flex flex-col gap-6 py-6 px-8 text-gray-300 font-semibold">
+          <ul className="flex flex-col gap-8 py-6 px-8 text-gray-300 font-semibold text-xl tracking-wide">
             <li>
               <a
                 href="#projets"

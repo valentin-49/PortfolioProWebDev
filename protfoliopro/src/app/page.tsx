@@ -17,22 +17,22 @@ export default function Home() {
           content="Portfolio professionnel de Valentin, développeur web spécialisé en interfaces modernes, performantes et accessibles."
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600;800&display=swap"
           rel="stylesheet"
         />
       </Head>
 
       <Header />
 
-      <main className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-800 p-12 sm:p-20 flex flex-col gap-32 transition-colors mt-12">
+      <main className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-800 p-12 sm:p-20 flex flex-col gap-28 transition-colors mt-12 ">
          <section className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 md:gap-24 pt-28 sm:pt-32 md:pt-36">
           <AnimatedText>
-            <h1 className="text-5xl sm:text-6xl font-extrabold leading-tight bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-              Valentin,<br /> développeur web moderne
+            <h1 className="text-6xl sm:text-7xl font-extrabold leading-tight bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+              Bouet Valentin, Développeur web
             </h1>
-            <p className="mt-6 text-lg text-gray-800 max-w-lg mx-auto md:mx-0 drop-shadow-sm">
-              Je crée des expériences web performantes, accessibles et esthétiques.<br />
-              Boostez votre présence en ligne avec un code propre, réactif et durable.
+            <p className="mt-6 text-xl text-gray-800 max-w-lg mx-auto md:mx-0 drop-shadow-sm">
+              Je conçois des interfaces web <strong className="font-bold">rapides</strong> et <strong className="font-bold">accessibles</strong>.<br />
+              Donnez vie à votre <strong className="font-bold">présence digitale</strong> grâce à un code <strong className="font-bold">propre</strong>, <strong className="font-bold">optimisé</strong> et <strong className="font-bold">pérenne</strong>.
             </p>
           </AnimatedText>
 
@@ -90,18 +90,43 @@ export default function Home() {
           </div>
         </section>
       </main>
-
+      <section id="technologies" className="w-full bg-gradient-to-r from-purple-900 via-pink-900 to-red-900 pt-16">
+          <AnimatedTitle>Technologies maîtrisées</AnimatedTitle>
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-8 text-center text-white max-w-2/3 mx-auto">
+            {/* Exemple d’icônes + texte */}
+            <div>
+              <img src="/images/react.svg" alt="React" className="mx-auto mb-2 h-12 w-12" />
+              <p className="font-semibold">React</p>
+            </div>
+            <div>
+              <img src="/images/next-dot-js-svgrepo-com.svg" alt="Next.js" className="mx-auto mb-2 h-12 w-12" />
+              <p className="font-semibold">Next.js</p>
+            </div>
+            <div>
+              <img src="/images/typescript.svg" alt="TypeScript" className="mx-auto mb-2 h-12 w-12" />
+              <p className="font-semibold">TypeScript</p>
+            </div>
+            <div>
+              <img src="/images/tailwind.svg" alt="Tailwind CSS" className="mx-auto mb-2 h-12 w-12" />
+              <p className="font-semibold">Tailwind CSS</p>
+            </div>
+            <div>
+              <img src="/images/node-js-svgrepo-com.svg" alt="Node.js" className="mx-auto mb-2 h-12 w-12" />
+              <p className="font-semibold">Node.js</p>
+            </div>
+            <div>
+              <img src="/images/css-3-svgrepo-com.svg" alt="CSS3" className="mx-auto mb-2 h-12 w-12" />
+              <p className="font-semibold">CSS 3</p>
+            </div>
+            {/* Ajoute/modifie les technologies et icônes que tu souhaites */}
+          </div>
+            <p className="mt-16 text-xl text-white max-w-lg mx-auto drop-shadow-sm text-center">
+              <strong>et plus encore ...</strong>
+            </p>
       {/* CV hors main pour 100% width background */}
-      <section
-        id="cv"
-        className="w-full bg-gradient-to-r from-purple-900 via-pink-900 to-red-900"
-      >
         <div className="max-w-4xl mx-auto text-center px-6 sm:px-12 py-16">
-          <AnimatedTitle>
-            Mon CV
-          </AnimatedTitle>
           <p className="text-white mb-8 text-lg max-w-xl mx-auto drop-shadow-sm">
-            Téléchargez mon CV au format PDF pour en savoir plus sur mon parcours.
+            Téléchargez mon CV au format PDF pour en savoir plus.
           </p>
           <a
             href="/CV_bouet_valentin.pdf"
@@ -113,7 +138,7 @@ export default function Home() {
         </div>
       </section>
 
-      <main className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-800 p-12 sm:p-20 flex flex-col gap-32 transition-colors">
+      <main className="text-centermin-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-800 p-12 sm:p-20 flex flex-col gap-32 transition-colors">
         {/* Contact */}
        <section
           id="contact"
@@ -122,9 +147,9 @@ export default function Home() {
           <AnimatedTitle>
             Contact
           </AnimatedTitle>
-          <p className="text-black mb-8 text-lg max-w-xl mx-auto drop-shadow-sm">
-            Une idée ? Un projet ? N&apos;hésitez pas à me contacter pour discuter de vos besoins, poser vos questions ou simplement échanger autour du développement web. Je suis là pour vous accompagner dans vos projets numériques.
-          </p>
+          <p className="mt-6 text-xl text-gray-800 max-w-lg mx-auto drop-shadow-sm mb-12">
+  Une idée ? Un projet ? N&apos;hésitez pas à me contacter pour discuter de vos besoins, poser vos questions ou simplement échanger autour du développement web. Je suis là pour vous accompagner dans vos projets numériques.
+</p>
           <form
             action="https://formspree.io/f/xovwrbzl"
             method="POST"
