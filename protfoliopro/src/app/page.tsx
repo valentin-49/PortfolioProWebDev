@@ -12,11 +12,6 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Bouet Valentin | Web Développeur</title>
-        <meta
-          name="description"
-          content="Portfolio professionnel de Valentin, développeur web spécialisé en interfaces modernes, performantes et accessibles."
-        />
         <meta name="google-site-verification" content="VOhnB3pMMDS5-rYVwwAMXYz0lLLl2kPZCCioDgk_SSU" />
         <link
           href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600;800&display=swap"
