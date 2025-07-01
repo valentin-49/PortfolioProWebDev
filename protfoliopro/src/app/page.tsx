@@ -26,12 +26,12 @@ export default function Home() {
       <Header />
 
       <main className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-800 p-12 sm:p-20 flex flex-col gap-28 transition-colors mt-12 ">
-         <section className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 md:gap-24 pt-28 sm:pt-32 md:pt-36">
+         <section className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 md:gap-24 pt-20 sm:pt-28 md:pt-36 px-4">
           <AnimatedText>
-            <h1 className="text-6xl sm:text-7xl font-extrabold leading-tight bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent text-center md:text-left">
               Bouet Valentin, Développeur web
             </h1>
-            <p className="mt-6 text-xl text-gray-800 max-w-lg mx-auto md:mx-0 drop-shadow-sm">
+            <p className="mt-6 text-lg sm:text-xl text-gray-800 max-w-xl mx-auto md:mx-0 text-center md:text-left drop-shadow-sm">
               Je conçois des interfaces web <strong className="font-bold">rapides</strong> et <strong className="font-bold">accessibles</strong>.<br />
               Donnez vie à votre <strong className="font-bold">présence digitale</strong> grâce à un code <strong className="font-bold">propre</strong>, <strong className="font-bold">optimisé</strong> et <strong className="font-bold">pérenne</strong>.
             </p>
@@ -43,11 +43,12 @@ export default function Home() {
               alt="Illustration développeur web"
               width={500}
               height={300}
-              className="rounded-lg shadow-[18px_18px_8px_13px_#a0aec0]"
+              className="rounded-lg shadow-md w-full max-w-[420px] h-auto"
               priority
             />
           </AnimatedImage>
         </section>
+
 
         {/* Projets */}
         <section id="projets" className="mb-24 pt-8 sm:pt-12 md:pt-16 max-w-4xl mx-auto">

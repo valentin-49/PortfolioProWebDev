@@ -13,7 +13,7 @@ export default function AnimatedTitle({ children, className = "", delay = 0.2 }:
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay }}
-      className={`relative text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-24 pb-6 ${className}`}
+      className={`relative text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent text-center mb-24 pb-6 ${className}`}
     >
       {children}
       <span className="absolute left-1/2 bottom-[-10px] -translate-x-1/2 h-1.5 w-24 sm:w-36 md:w-48 rounded-full bg-pink-500 shadow-pink-500/70 animate-pulse"></span>
