@@ -1,16 +1,17 @@
-'use client';
-
-import { motion } from 'framer-motion';
 import Head from 'next/head';
+import AnimatedText from "../components/AnimatedText";
+import AnimatedImage from "../components/AnimatedImage";
+import AnimatedTitle from "../components/AnimatedTitle";
 import ProjectCard from '../components/ProjectCard';
 import Header from '../components/Header';
 import Image from 'next/image';
 
 export default function Home() {
+  
   return (
     <>
       <Head>
-        <title>Valentin | Développeur Web</title>
+        <title>Bouet Valentin | Web Développeur</title>
         <meta
           name="description"
           content="Portfolio professionnel de Valentin, développeur web spécialisé en interfaces modernes, performantes et accessibles."
@@ -24,30 +25,18 @@ export default function Home() {
       <Header />
 
       <main className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-800 p-12 sm:p-20 flex flex-col gap-32 transition-colors mt-12">
-        <section className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 md:gap-24 pt-28 sm:pt-32 md:pt-36">
-          {/* Texte à gauche */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex-1 text-center md:text-left"
-          >
+         <section className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 md:gap-24 pt-28 sm:pt-32 md:pt-36">
+          <AnimatedText>
             <h1 className="text-5xl sm:text-6xl font-extrabold leading-tight bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
               Valentin,<br /> développeur web moderne
             </h1>
-            <p className="mt-6 text-lg text-gray-800 max-w-lg mx-auto md:mx-0 drop-shadow-sm"> 
+            <p className="mt-6 text-lg text-gray-800 max-w-lg mx-auto md:mx-0 drop-shadow-sm">
               Je crée des expériences web performantes, accessibles et esthétiques.<br />
               Boostez votre présence en ligne avec un code propre, réactif et durable.
             </p>
-          </motion.div>
+          </AnimatedText>
 
-          {/* Image à droite */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex-1 max-w-md mx-auto md:mx-0"
-          >
+          <AnimatedImage>
             <Image
               src="/images/Les-formations-devenir-developpeur-application-mobile-F.jpg"
               alt="Illustration développeur web"
@@ -56,20 +45,14 @@ export default function Home() {
               className="rounded-lg shadow-[18px_18px_8px_13px_#a0aec0]"
               priority
             />
-          </motion.div>
+          </AnimatedImage>
         </section>
 
         {/* Projets */}
         <section id="projets" className="mb-24 pt-8 sm:pt-12 md:pt-16 max-w-4xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-3/3 relative text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-24 pb-6"
-          >
+          <AnimatedTitle>
             Mes Projets
-            <span className="absolute left-1/2 bottom-[-10px] -translate-x-1/2 h-1 w-3/3 rounded-full bg-pink-500 shadow-pink-500/70 animate-pulse"></span>
-          </motion.h2>
+          </AnimatedTitle>
           <div className="grid gap-10 sm:grid-cols-2">
             <ProjectCard
               title="Site WEB"
@@ -114,15 +97,9 @@ export default function Home() {
         className="w-full bg-gradient-to-r from-purple-900 via-pink-900 to-red-900"
       >
         <div className="max-w-4xl mx-auto text-center px-6 sm:px-12 py-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-3/3 relative text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-24 pb-6 drop-shadow-md"
-          >
+          <AnimatedTitle>
             Mon CV
-            <span className="absolute left-1/2 bottom-[-10px] -translate-x-1/2 h-1 w-3/3 rounded-full bg-pink-500 shadow-pink-500/70 animate-pulse"></span>
-          </motion.h2>
+          </AnimatedTitle>
           <p className="text-white mb-8 text-lg max-w-xl mx-auto drop-shadow-sm">
             Téléchargez mon CV au format PDF pour en savoir plus sur mon parcours.
           </p>
@@ -142,15 +119,9 @@ export default function Home() {
           id="contact"
           className="pt-8 sm:pt-12 md:pt-16 w-3/3 mx-auto text-center"
         >
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full relative text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-14 pb-6"
-          >
+          <AnimatedTitle>
             Contact
-            <span className="absolute left-1/2 bottom-[-10px] -translate-x-1/2 h-1 w-3/4 rounded-full bg-pink-500 shadow-pink-500/70 animate-pulse"></span>
-          </motion.h2>
+          </AnimatedTitle>
           <p className="text-black mb-8 text-lg max-w-xl mx-auto drop-shadow-sm">
             Une idée ? Un projet ? N&apos;hésitez pas à me contacter pour discuter de vos besoins, poser vos questions ou simplement échanger autour du développement web. Je suis là pour vous accompagner dans vos projets numériques.
           </p>
@@ -191,6 +162,10 @@ export default function Home() {
           </form>
         </section>
       </main>
+      {/* Footer */}
+      <footer className="text-center text-sm text-gray-500 pt-24 pb-8 bg-[#121417] bg-opacity-90 backdrop-blur-md z-50">
+        © {new Date().getFullYear()} Valentin – Tous droits réservés.
+      </footer>
     </>
   );
 }
