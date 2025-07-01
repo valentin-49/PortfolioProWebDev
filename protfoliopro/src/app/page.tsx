@@ -5,6 +5,7 @@ import AnimatedTitle from "../components/AnimatedTitle";
 import ProjectCard from '../components/ProjectCard';
 import Header from '../components/Header';
 import Image from 'next/image';
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Home() {
   
@@ -35,7 +36,7 @@ export default function Home() {
         className="relative min-h-screen bg-cover bg-center text-white p-6 sm:p-20 flex flex-col gap-28 transition-colors mt-12"
         style={{ backgroundImage: "url('/images/black_wavy_lines_background.webp')" }}
       >
-
+  <Analytics />
       <section className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 md:gap-24 pt-20 sm:pt-28 md:pt-36 px-4">
   <AnimatedText>
     <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent text-center md:text-left">
