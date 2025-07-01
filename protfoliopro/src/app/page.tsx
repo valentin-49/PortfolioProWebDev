@@ -21,33 +21,73 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600;800&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/black_wavy_lines_background.webp"
+          type="image/webp"
+        />
       </Head>
 
       <Header />
 
-      <main className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-800 p-12 sm:p-20 flex flex-col gap-28 transition-colors mt-12 ">
-         <section className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 md:gap-24 pt-20 sm:pt-28 md:pt-36 px-4">
-          <AnimatedText>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent text-center md:text-left">
-              Bouet Valentin, Développeur web
-            </h1>
-            <p className="mt-6 text-lg sm:text-xl text-gray-800 max-w-xl mx-auto md:mx-0 text-center md:text-left drop-shadow-sm">
-              Je conçois des interfaces web <strong className="font-bold">rapides</strong> et <strong className="font-bold">accessibles</strong>.<br />
-              Donnez vie à votre <strong className="font-bold">présence digitale</strong> grâce à un code <strong className="font-bold">propre</strong>, <strong className="font-bold">optimisé</strong> et <strong className="font-bold">pérenne</strong>.
-            </p>
-          </AnimatedText>
+      <main
+        className="relative min-h-screen bg-cover bg-center text-white p-6 sm:p-20 flex flex-col gap-28 transition-colors mt-12"
+        style={{ backgroundImage: "url('/images/black_wavy_lines_background.webp')" }}
+      >
 
-          <AnimatedImage>
-            <Image
-              src="/images/Les-formations-devenir-developpeur-application-mobile-F.jpg"
-              alt="Illustration développeur web"
-              width={500}
-              height={300}
-              className="rounded-lg shadow-md w-full max-w-[420px] h-auto"
-              priority
-            />
-          </AnimatedImage>
-        </section>
+      <section className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 md:gap-24 pt-20 sm:pt-28 md:pt-36 px-4">
+  <AnimatedText>
+    <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent text-center md:text-left">
+      Bouet Valentin, Développeur web
+    </h1>
+    <p className="mt-6 text-lg sm:text-xl text-gray-800 max-w-xl mx-auto md:mx-0 text-center md:text-left drop-shadow-sm">
+      Je conçois des interfaces web <strong className="font-bold">rapides</strong> et <strong className="font-bold">accessibles</strong>.<br />
+      Donnez vie à votre <strong className="font-bold">présence digitale</strong> grâce à un code <strong className="font-bold">propre</strong> et <strong className="font-bold">optimisé</strong>.
+    </p>
+
+    {/* Ajout des icônes LinkedIn et GitHub */}
+    <div className="mt-8 flex justify-center md:justify-start gap-6">
+      <a
+        href="https://www.linkedin.com/in/valentin-bouet-9861bb312/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        className="transition-transform hover:scale-110"
+      >
+        <img
+          src="/images/linkedin-svgrepo-com.svg"
+          alt="LinkedIn"
+          className="w-8 h-8"
+        />
+      </a>
+      <a
+        href="https://github.com/valentin-49"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+        className="transition-transform hover:scale-110"
+      >
+        <img
+          src="/images/github-142-svgrepo-com.svg"
+          alt="GitHub"
+          className="w-8 h-8"
+        />
+      </a>
+    </div>
+  </AnimatedText>
+
+  <AnimatedImage>
+    <Image
+      src="/images/Les-formations-devenir-developpeur-application-mobile-F.jpg"
+      alt="Illustration développeur web"
+      width={500}
+      height={300}
+      className="rounded-lg shadow-[6px_10px_8px_3px_#a0aec0] w-full max-w-[420px] h-auto"
+      priority
+    />
+  </AnimatedImage>
+</section>
 
 
         {/* Projets */}
@@ -139,8 +179,10 @@ export default function Home() {
           </a>
         </div>
       </section>
-
-      <main className="text-centermin-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-800 p-12 sm:p-20 flex flex-col gap-32 transition-colors">
+      <main
+        className="relative min-h-screen bg-cover bg-center text-white p-6 sm:p-20 flex flex-col gap-28 transition-colors"
+        style={{ backgroundImage: "url('/images/black_wavy_lines_background.webp')" }}
+      >
         {/* Contact */}
        <section
           id="contact"
