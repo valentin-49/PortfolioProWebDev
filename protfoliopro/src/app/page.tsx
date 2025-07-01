@@ -16,6 +16,7 @@ export default function Home() {
           name="description"
           content="Portfolio professionnel de Valentin, développeur web spécialisé en interfaces modernes, performantes et accessibles."
         />
+        <meta name="google-site-verification" content="google2a95d1fb4f78c4fa.html" />
         <link
           href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600;800&display=swap"
           rel="stylesheet"
