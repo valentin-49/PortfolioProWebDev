@@ -152,7 +152,7 @@ export default function Home() {
             <span className="absolute left-1/2 bottom-[-10px] -translate-x-1/2 h-1 w-3/4 rounded-full bg-pink-500 shadow-pink-500/70 animate-pulse"></span>
           </motion.h2>
           <p className="text-black mb-8 text-lg max-w-xl mx-auto drop-shadow-sm">
-            Une idée ? Un projet ? N'hésitez pas à me contacter pour discuter de vos besoins, poser vos questions ou simplement échanger autour du développement web. Je suis là pour vous accompagner dans vos projets numériques.
+            Une idée ? Un projet ? N&apos;hésitez pas à me contacter pour discuter de vos besoins, poser vos questions ou simplement échanger autour du développement web. Je suis là pour vous accompagner dans vos projets numériques.
           </p>
           <form
             action="https://formspree.io/f/xovwrbzl"
@@ -165,38 +165,32 @@ export default function Home() {
                 name="name"
                 placeholder="Votre nom"
                 required
-                className="flex-1 p-3 border border-gray-700 rounded bg-gray-900 text-gray-200 placeholder-gray-500 text-lg"
+                className="flex-1 p-3 border border-gray-700 rounded bg-gray-900 text-gray-200 placeholder-gray-500 focus:outline-pink-500 focus:outline-2"
               />
               <input
                 type="email"
                 name="email"
-                placeholder="Votre email"
+                placeholder="Votre e-mail"
                 required
-                className="flex-1 p-3 border border-gray-700 rounded bg-gray-900 text-gray-200 placeholder-gray-500 text-lg"
+                className="flex-1 p-3 border border-gray-700 rounded bg-gray-900 text-gray-200 placeholder-gray-500 focus:outline-pink-500 focus:outline-2"
               />
             </div>
             <textarea
               name="message"
-              rows={4}
               placeholder="Votre message"
               required
-              className="p-3 border border-gray-700 rounded bg-gray-900 text-gray-200 placeholder-gray-500 text-lg resize-y"
-            ></textarea>
+              rows={6}
+              className="w-full p-3 border border-gray-700 rounded bg-gray-900 text-gray-200 placeholder-gray-500 focus:outline-pink-500 focus:outline-2"
+            />
             <button
               type="submit"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-full hover:brightness-110 transition text-lg"
+              className="bg-pink-600 hover:bg-pink-700 transition text-white px-6 py-3 rounded"
             >
               Envoyer
             </button>
           </form>
         </section>
-
       </main>
-
-      {/* Footer */}
-      <footer className="text-center text-sm text-gray-500 pt-24 pb-8 bg-[#121417] bg-opacity-90 backdrop-blur-md z-50">
-        © {new Date().getFullYear()} Valentin – Tous droits réservés.
-      </footer>
     </>
   );
 }
