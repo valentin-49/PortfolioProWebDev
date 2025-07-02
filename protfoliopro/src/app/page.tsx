@@ -1,10 +1,14 @@
 import Head from 'next/head';
+
 import AnimatedText from "../components/AnimatedText";
 import AnimatedImage from "../components/AnimatedImage";
 import AnimatedTitle from "../components/AnimatedTitle";
+import AnimatedSlide from "../components/animatedSlide";
+
 import ProjectCard from '../components/ProjectCard';
 import Header from '../components/Header';
 import Image from 'next/image';
+
 import { Analytics } from "@vercel/analytics/next"
 
 export default function Home() {
@@ -84,97 +88,113 @@ export default function Home() {
     />
   </AnimatedImage>
 </section>
-
-
         {/* Projets */}
         <section id="projets" className="mb-24 pt-8 sm:pt-12 md:pt-16 max-w-4xl mx-auto">
           <AnimatedTitle>
             Mes Projets
           </AnimatedTitle>
-          <div className="grid gap-10 sm:grid-cols-2">
-            <ProjectCard
-              title="Site WEB"
-              description="Site web de la sociéte Panneaux Stationnement"
-              link="https://www.panneauxstationnement.fr/"
-              imageSrc="/images/PanneauxStationnementImg.png"
-              imageAlt="Apercu site Panneaux Stationnement"
-              className="bg-gray-900 border border-gray-700 text-gray-200 hover:border-pink-500 transition shadow-[6px_10px_8px_3px_#a0aec0]"
-            />
-            <ProjectCard
-              title="Application SaaS"
-              description="Application Web Saas de Panneaux Stationnement"
-              link="https://app.panneauxstationnement.fr/"
-              imageSrc="/images/PanneauxStationnementSaaSImg.png"
-              imageAlt="Aperçu SaaS Panneaux Stationnement"
-              className="bg-gray-900 border border-gray-700 text-gray-200 hover:border-pink-500 transition shadow-[6px_10px_8px_3px_#a0aec0]"
-            />
-            <ProjectCard
-              title="Site WEB"
-              description="Site web de la sociéte Dempartner"
-              link="https://www.dempartner.fr/"
-              imageSrc="/images/DempartnerImg.png"
-              imageAlt="Aperçu Site Dempartner"
-              className="bg-gray-900 border border-gray-700 text-gray-200 hover:border-pink-500 transition shadow-[6px_10px_8px_3px_#a0aec0]"
-            />
-            <ProjectCard
+          <div className="grid gap-12 sm:grid-cols-2">
+            <AnimatedSlide>
+              <ProjectCard
+                title="Site WEB"
+                description="Site web de la sociéte Panneaux Stationnement"
+                link="https://www.panneauxstationnement.fr/"
+                imageSrc="/images/PanneauxStationnementImg.png"
+                imageAlt="Apercu site Panneaux Stationnement"
+                className="bg-gray-900 border border-gray-700 text-gray-200 hover:border-pink-500 shadow-[6px_10px_8px_3px_#a0aec0] "
+              />
+            </AnimatedSlide>
+            <AnimatedSlide>
+              <ProjectCard
+                title="Application SaaS"
+                description="Application Web Saas de Panneaux Stationnement"
+                link="https://app.panneauxstationnement.fr/"
+                imageSrc="/images/PanneauxStationnementSaaSImg.png"
+                imageAlt="Aperçu SaaS Panneaux Stationnement"
+                className="bg-gray-900 border border-gray-700 text-gray-200 hover:border-pink-500 transition shadow-[6px_10px_8px_3px_#a0aec0]"
+              />
+            </AnimatedSlide>
+            <AnimatedSlide>
+              <ProjectCard
+                title="Site WEB"
+                description="Site web de la sociéte Dempartner"
+                link="https://www.dempartner.fr/"
+                imageSrc="/images/DempartnerImg.png"
+                imageAlt="Aperçu Site Dempartner"
+                className="bg-gray-900 border border-gray-700 text-gray-200 hover:border-pink-500 transition shadow-[6px_10px_8px_3px_#a0aec0]"
+              />
+            </AnimatedSlide>
+            <AnimatedSlide>
+              <ProjectCard
               title="Site WEB"
               description="Site Web du salon de Coiffure La Bulle à Nantes"
               link="https://www.labullecoiffure.fr/"
               imageSrc="/images/LaBulleImg.png"
               imageAlt="Aperçu site La Bulle"
               className="bg-gray-900 border border-gray-700 text-gray-200 hover:border-pink-500 transition shadow-[6px_10px_8px_3px_#a0aec0]"
-            />
-            
+              />
+            </AnimatedSlide>
           </div>
         </section>
       </main>
-      <section id="technologies" className="w-full bg-gradient-to-r from-purple-900 via-pink-900 to-red-900 pt-16">
-          <AnimatedTitle>Technologies maîtrisées</AnimatedTitle>
-          <div className="grid grid-cols-3 sm:grid-cols-6 gap-8 text-center text-white max-w-2/3 mx-auto">
-            {/* Exemple d’icônes + texte */}
-            <div>
-              <img src="/images/react.svg" alt="React" className="mx-auto mb-2 h-12 w-12" />
-              <p className="font-semibold">React</p>
+      <AnimatedSlide>
+        <section id="technologies" className="w-full bg-gradient-to-r from-purple-900 via-pink-900 to-red-900 pt-16">
+            <AnimatedTitle>Technologies maîtrisées</AnimatedTitle>
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-8 text-center text-white max-w-2/3 mx-auto place-items-center">
+              {/* Exemple d’icônes + texte */}
+              <div>
+                <img src="/images/bubble-io.svg" alt="Bubble.io" className="mx-auto mb-2 h-12 w-12" />
+                <p className="font-semibold">Bubble.io</p>
+              </div>
+              <div>
+                <img src="/images/webflow-svgrepo-com.svg" alt="Webflow" className="mx-auto mb-2 h-12 w-12" />
+                <p className="font-semibold">Webflow</p>
+              </div>
+              <div>
+                <img src="/images/react.svg" alt="React" className="mx-auto mb-2 h-12 w-12" />
+                <p className="font-semibold">React</p>
+              </div>
+              <div>
+                <img src="/images/next-dot-js-svgrepo-com.svg" alt="Next.js" className="mx-auto mb-2 h-12 w-12" />
+                <p className="font-semibold">Next.js</p>
+              </div>
+              <div>
+                <img src="/images/typescript.svg" alt="TypeScript" className="mx-auto mb-2 h-12 w-12" />
+                <p className="font-semibold">TypeScript</p>
+              </div>
+              <div className="hidden sm:block sm:col-span-1"></div> {/* Décalage */}
+              <div>
+                <img src="/images/tailwind.svg" alt="Tailwind CSS" className="mx-auto mb-2 h-12 w-12" />
+                <p className="font-semibold">Tailwind CSS</p>
+              </div>
+              <div>
+                <img src="/images/node-js-svgrepo-com.svg" alt="Node.js" className="mx-auto mb-2 h-12 w-12" />
+                <p className="font-semibold">Node.js</p>
+              </div>
+              <div>
+                <img src="/images/css-3-svgrepo-com.svg" alt="CSS3" className="mx-auto mb-2 h-12 w-12" />
+                <p className="font-semibold">CSS 3</p>
+              </div>
+              {/* Ajoute/modifie les technologies et icônes que tu souhaites */}
             </div>
-            <div>
-              <img src="/images/next-dot-js-svgrepo-com.svg" alt="Next.js" className="mx-auto mb-2 h-12 w-12" />
-              <p className="font-semibold">Next.js</p>
-            </div>
-            <div>
-              <img src="/images/typescript.svg" alt="TypeScript" className="mx-auto mb-2 h-12 w-12" />
-              <p className="font-semibold">TypeScript</p>
-            </div>
-            <div>
-              <img src="/images/tailwind.svg" alt="Tailwind CSS" className="mx-auto mb-2 h-12 w-12" />
-              <p className="font-semibold">Tailwind CSS</p>
-            </div>
-            <div>
-              <img src="/images/node-js-svgrepo-com.svg" alt="Node.js" className="mx-auto mb-2 h-12 w-12" />
-              <p className="font-semibold">Node.js</p>
-            </div>
-            <div>
-              <img src="/images/css-3-svgrepo-com.svg" alt="CSS3" className="mx-auto mb-2 h-12 w-12" />
-              <p className="font-semibold">CSS 3</p>
-            </div>
-            {/* Ajoute/modifie les technologies et icônes que tu souhaites */}
-          </div>
-            <p className="mt-16 text-xl text-white max-w-lg mx-auto drop-shadow-sm text-center">
-              <strong>et plus encore ...</strong>
+              <p className="mt-16 text-xl text-white max-w-lg mx-auto drop-shadow-sm text-center">
+                <strong>et plus encore ...</strong>
+              </p>
+        {/* CV hors main pour 100% width background */}
+          <div className="max-w-4xl mx-auto text-center px-6 sm:px-12 py-16">
+            <p className="text-white mb-8 text-lg max-w-xl mx-auto drop-shadow-sm">
+              Téléchargez mon CV au format PDF pour en savoir plus.
             </p>
-      {/* CV hors main pour 100% width background */}
-        <div className="max-w-4xl mx-auto text-center px-6 sm:px-12 py-16">
-          <p className="text-white mb-8 text-lg max-w-xl mx-auto drop-shadow-sm">
-            Téléchargez mon CV au format PDF pour en savoir plus.
-          </p>
-          <a
-            href="/CV_bouet_valentin.pdf"
-            download
-            className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full hover:brightness-125 transition text-lg drop-shadow-md"
-          >
-            Télécharger le CV
-          </a>
-        </div>
-      </section>
+            <a
+              href="/CV_bouet_valentin.pdf"
+              download
+              className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full hover:brightness-125 transition text-lg drop-shadow-md"
+            >
+              Télécharger le CV
+            </a>
+          </div>
+        </section>
+      </AnimatedSlide>
       <main
         className="relative min-h-screen bg-cover bg-center text-white p-6 sm:p-20 flex flex-col gap-28 transition-colors"
         style={{ backgroundImage: "url('/images/black_wavy_lines_background.webp')" }}
@@ -182,7 +202,7 @@ export default function Home() {
         {/* Contact */}
        <section
           id="contact"
-          className="pt-8 sm:pt-12 md:pt-16 w-3/3 mx-auto text-center"
+          className="pt-8 sm:pt-12 md:pt-16 w-3/3 mx-auto text-center pb-20"
         >
           <AnimatedTitle>
             Contact
@@ -229,7 +249,7 @@ export default function Home() {
       </main>
       {/* Footer */}
       <footer className="text-center text-sm text-gray-500 pt-24 pb-8 bg-[#121417] bg-opacity-90 backdrop-blur-md z-50">
-        © {new Date().getFullYear()} Valentin – Tous droits réservés.
+        © {new Date().getFullYear()}  – Bouet Valentin – Tous droits réservés.
       </footer>
     </>
   );

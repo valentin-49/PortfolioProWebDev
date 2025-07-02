@@ -20,7 +20,7 @@ export default function ProjectCard({
   return (
     <a
       href={link}
-      className={`block p-6 rounded-xl border transition-colors hover:border-pink-500 ${className}`}
+      className={`block p-6 rounded-xl border hover:border-pink-500 ${className} hover:scale-110 duration-300 ease-in-out`}
       target="_blank"
       rel="noopener noreferrer"
     >

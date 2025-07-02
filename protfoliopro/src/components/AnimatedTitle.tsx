@@ -7,12 +7,17 @@ interface AnimatedTitleProps {
   delay?: number;
 }
 
-export default function AnimatedTitle({ children, className = "", delay = 0.2 }: AnimatedTitleProps) {
+export default function AnimatedTitle({ children, className = "", delay = 0.3 }: AnimatedTitleProps) {
   return (
     <motion.h2
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
       transition={{ duration: 0.8, delay }}
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, }
+      }}
       className={`relative text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent text-center mb-24 pb-6 ${className}`}
     >
       {children}
