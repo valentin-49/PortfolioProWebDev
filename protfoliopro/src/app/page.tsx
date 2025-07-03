@@ -4,12 +4,13 @@ import AnimatedText from "../components/AnimatedText";
 import AnimatedImage from "../components/AnimatedImage";
 import AnimatedTitle from "../components/AnimatedTitle";
 import AnimatedSlide from "../components/animatedSlide";
+import TypingHeading from "../components/TypingHeading"
 
 import ProjectCard from '../components/ProjectCard';
 import Header from '../components/Header';
 import Image from 'next/image';
 
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 
 export default function Home() {
   
@@ -31,62 +32,85 @@ export default function Home() {
 
       <Header />
 
-      <main
-        className="relative min-h-screen bg-cover bg-center text-white p-6 sm:p-20 flex flex-col gap-28 transition-colors mt-12"
-        style={{ backgroundImage: "url('/images/black_wavy_lines_background.webp')" }}
-      >
+  <main
+    className="relative min-h-screen bg-cover bg-center text-white p-6 sm:p-20 flex flex-col gap-28 transition-colors mt-12"
+    style={{ backgroundImage: "url('/images/black_wavy_lines_background.webp')" }}
+  >
   <Analytics />
       <section className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 md:gap-24 pt-20 sm:pt-28 md:pt-36 px-4">
   <AnimatedText>
-    <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent text-center md:text-left">
-      Bouet Valentin, Développeur web
-    </h1>
-    <p className="mt-6 text-lg sm:text-xl text-gray-800 max-w-xl mx-auto md:mx-0 text-center md:text-left drop-shadow-sm">
-      Je conçois des interfaces web <strong className="font-bold">rapides</strong> et <strong className="font-bold">accessibles</strong>.<br />
-      Donnez vie à votre <strong className="font-bold">présence digitale</strong> grâce à un code <strong className="font-bold">propre</strong> et <strong className="font-bold">optimisé</strong>.
-    </p>
+  {/* Conteneur qui évite les sauts verticaux pendant l'animation */}
+  <div className="min-h-[120px] sm:min-h-[160px] max-w-xl mx-auto md:mx-0">
+    <TypingHeading />
+  </div>
 
-    {/* Ajout des icônes LinkedIn et GitHub */}
-    <div className="mt-8 flex justify-center md:justify-start gap-6">
-      <a
-        href="https://www.linkedin.com/in/valentin-bouet-9861bb312/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn"
-        className="transition-transform hover:scale-110"
-      >
-        <img
-          src="/images/linkedin-svgrepo-com.svg"
-          alt="LinkedIn"
-          className="w-8 h-8"
-        />
-      </a>
-      <a
-        href="https://github.com/valentin-49"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="GitHub"
-        className="transition-transform hover:scale-110"
-      >
-        <img
-          src="/images/github-142-svgrepo-com.svg"
-          alt="GitHub"
-          className="w-8 h-8"
-        />
-      </a>
-    </div>
-  </AnimatedText>
+  <p className="mt-6 text-lg sm:text-xl text-gray-800 max-w-xl mx-auto md:mx-0 text-center md:text-left drop-shadow-sm">
+    Je conçois des interfaces web <strong className="font-bold">rapides</strong> et <strong className="font-bold">accessibles</strong>.<br />
+    Donnez vie à votre <strong className="font-bold">présence digitale</strong> grâce à un code <strong className="font-bold">propre</strong> et <strong className="font-bold">optimisé</strong>.
+  </p>
 
+  <div className="mt-8 flex justify-center md:justify-start gap-6 max-w-xl mx-auto md:mx-0">
+    <a
+      href="https://www.linkedin.com/in/valentin-bouet-9861bb312/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn"
+      className="transition-transform hover:scale-110"
+    >
+      <img src="/images/linkedin-svgrepo-com.svg" alt="LinkedIn" className="w-8 h-8" />
+    </a>
+    <a
+      href="https://github.com/valentin-49"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="GitHub"
+      className="transition-transform hover:scale-110"
+    >
+      <img src="/images/github-142-svgrepo-com.svg" alt="GitHub" className="w-8 h-8" />
+    </a>
+  </div>
+</AnimatedText>
+
+  <div className="relative w-full max-w-[380px] mx-auto">
   <AnimatedImage>
     <Image
       src="/images/Les-formations-devenir-developpeur-application-mobile-F.jpg"
       alt="Illustration développeur web"
-      width={500}
-      height={300}
-      className="rounded-lg shadow-[6px_10px_8px_3px_#a0aec0] w-full max-w-[420px] h-auto"
+      width={420}
+      height={250}
+      className="rounded-lg shadow-[6px_10px_8px_3px_#a0aec0] w-full h-auto"
       priority
     />
+    {/* Colonne blanche chevauchante */}
+    <div
+      className="absolute top-0 -right-6 w-[60px] bg-white rounded-r-lg border-3 border-pink-500 shadow-md flex flex-col items-center justify-center gap-3 p-2 mt-10"
+    >
+      <Image
+        src="/images/app-developer-development-svgrepo-com.svg"
+        alt="Webflow logo"
+        width={32}
+        height={32}
+        className="drop-shadow-sm m-2"
+      />
+      <Image
+        src="/images/developer-development-object-svgrepo-com.svg"
+        alt="React logo"
+        width={32}
+        height={32}
+        className="drop-shadow-sm m-2"
+      />
+      <Image
+        src="/images/developer-mode-svgrepo-com.svg"
+        alt="JavaScript logo"
+        width={32}
+        height={32}
+        className="drop-shadow-sm m-2"
+      />
+    </div>
   </AnimatedImage>
+</div>
+
+
 </section>
         {/* Projets */}
         <section id="projets" className="mb-24 pt-8 sm:pt-12 md:pt-16 max-w-4xl mx-auto">
