@@ -113,7 +113,7 @@ export default function Header() {
                 onClick={(e) => handleScroll(e, 'technologies')}
                 className="block hover:text-pink-500 transition"
               >
-                CV
+                Compétences
               </a>
             </li>
             <li>
