@@ -113,7 +113,7 @@ export default function Home() {
 
 </section>
         {/* Projets */}
-        <section id="technologies" className="mb-24 pt-8 sm:pt-12 md:pt-16 max-w-4xl mx-auto">
+        <section id="projets" className="mb-24 pt-8 sm:pt-12 md:pt-16 max-w-4xl mx-auto">
           <AnimatedTitle>
             Mes Projets
           </AnimatedTitle>

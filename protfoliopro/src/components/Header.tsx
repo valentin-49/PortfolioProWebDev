@@ -110,7 +110,7 @@ export default function Header() {
             <li>
               <a
                 href="#cv"
-                onClick={(e) => handleScroll(e, 'cv')}
+                onClick={(e) => handleScroll(e, 'technologies')}
                 className="block hover:text-pink-500 transition"
               >
                 CV
